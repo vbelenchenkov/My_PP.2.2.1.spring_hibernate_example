@@ -39,8 +39,8 @@ public class MainApp {
         }
 
 
-        String searchModel = "Toyota";
-        int searchSeries = 123;
+        String searchModel = "BMW";
+        int searchSeries = 789;
         User user = userService.getUserByCar(searchModel, searchSeries);
         if (user != null) {
             System.out.println("Пользователь " + user.getFirstName() + " владеет машиной : " + searchModel );
@@ -51,7 +51,8 @@ public class MainApp {
         } else {
             System.out.println("Не найден пользователь с моделью: " + searchModel + " серия авто: " + searchSeries);
         }
+        context.close();
 
-}
+    }
 
 }
